@@ -1,7 +1,9 @@
 name: Update data and deploy Pages
 
-on:
+"on":
   workflow_dispatch:
+  push:
+    branches: [main]
   schedule:
     # 22:17 UTC = 06:17 China Standard Time on the following day.
     - cron: "17 22 * * *"
@@ -51,4 +53,3 @@ jobs:
           path: .
       - id: deployment
         uses: actions/deploy-pages@v4
-
