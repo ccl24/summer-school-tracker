@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="追踪美国常春藤大学面向高中生夏校项目的官方申请开放时间与截止日期。" />
+    <title>Ivy Summer Tracker｜高中生夏校申请日期</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#programs">跳到项目列表</a>
+    <main class="page-shell">
+      <header class="site-header">
+        <p class="eyebrow">OFFICIAL-SOURCE TRACKER</p>
+        <div class="heading-row">
+          <div>
+            <h1>Ivy Summer Tracker</h1>
+            <p class="lede">常春藤大学高中生夏校申请窗口，一页查清。</p>
+          </div>
+          <p id="updated-at" class="updated-at" aria-live="polite">正在加载最近核验时间…</p>
+        </div>
+        <div id="stale-banner" class="stale-banner" hidden role="status"></div>
+      </header>
+
+      <section class="controls" aria-label="筛选项目">
+        <label>
+          <span>搜索项目</span>
+          <input id="search" type="search" placeholder="如 Pre-College、Harvard" autocomplete="off" />
+        </label>
+        <label>
+          <span>大学</span>
+          <select id="university-filter"><option value="all">全部大学</option></select>
+        </label>
+        <label>
+          <span>申请状态</span>
+          <select id="status-filter">
+            <option value="all">全部状态</option>
+            <option value="open">申请中</option>
+            <option value="upcoming">未开放</option>
+            <option value="rolling">滚动录取</option>
+            <option value="closed">已截止</option>
+            <option value="unknown">待确认</option>
+          </select>
+        </label>
+        <label>
+          <span>国际生资格</span>
+          <select id="eligibility-filter">
+            <option value="all">全部资格</option>
+            <option value="international_allowed">国际生可申请</option>
+            <option value="us_only">仅美国学生</option>
+            <option value="local_only">地区限制</option>
+            <option value="unknown">待确认</option>
+          </select>
+        </label>
+        <label>
+          <span>排序</span>
+          <select id="sort-filter">
+            <option value="deadline">最近截止日期</option>
+            <option value="university">大学名称</option>
+            <option value="checked">最近核验</option>
+          </select>
+        </label>
+      </section>
+
+      <section class="list-heading" aria-label="项目结果">
+        <p id="result-count" aria-live="polite"></p>
+        <p>日期以官方时区为准；有具体时间时会附带你的本地时间。</p>
+      </section>
+      <section id="programs" class="program-list" aria-live="polite"></section>
+
+      <section class="notice" aria-labelledby="notice-title">
+        <h2 id="notice-title">使用说明</h2>
+        <p>本页每天尝试核验大学官方页面。页面改版、访问限制或日期冲突时，会保留上次可信信息并标示“待复核”。申请前请始终打开官方链接确认最终要求、资格和截止时间。</p>
+      </section>
+    </main>
+    <template id="program-template">
+      <article class="program-card">
+        <div class="program-topline">
+          <p class="university"></p>
+          <span class="status-pill"></span>
+        </div>
+        <h2></h2>
+        <div class="tags"></div>
+        <dl class="dates"></dl>
+        <p class="eligibility-note"></p>
+        <div class="card-footer">
+          <a class="source-link" target="_blank" rel="noreferrer">查看官方页面 <span aria-hidden="true">↗</span></a>
+          <p class="checked-at"></p>
+        </div>
+      </article>
+    </template>
+    <script src="assets/app.js" defer></script>
+  </body>
+</html>
+
