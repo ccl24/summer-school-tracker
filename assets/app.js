@@ -2,6 +2,7 @@ const labels = {
   open: "申请中", upcoming: "未开放", rolling: "滚动录取", closed: "已截止", unknown: "待确认",
   international_allowed: "国际生可申请", us_only: "仅美国学生", local_only: "地区限制"
 };
+const correctionBase = "https://github.com/ccl24/summer-school-tracker/issues/new?template=correction.yml";
 
 const state = { programs: [], filters: { search: "", university: "all", status: "all", eligibility: "all", sort: "deadline" } };
 const $ = (selector, root = document) => root.querySelector(selector);
@@ -25,6 +26,15 @@ function relativeChecked(value) {
 
 function nextDeadline(program) { return program.deadlines?.filter((item) => item.date).sort((a, b) => a.date.localeCompare(b.date))[0] || null; }
 function formatEligibility(program) { return labels[program.eligibility] || "资格待确认"; }
+function correctionUrl(program) {
+  const query = new URLSearchParams({
+    title: `[correction] ${program.programName}`,
+    "program-id": program.id,
+    "program-name": program.programName,
+    "official-url": program.sourceUrl || program.programUrl || ""
+  });
+  return `${correctionBase}&${query.toString()}`;
+}
 
 function render() {
   const { search, university, status, eligibility, sort } = state.filters;
@@ -46,15 +56,17 @@ function render() {
     $(".university", node).textContent = program.university;
     const pill = $(".status-pill", node); pill.textContent = program.reviewState === "needs_review" ? "待复核" : (labels[program.status] || "待确认"); pill.classList.add(`status-${program.reviewState === "needs_review" ? "unknown" : program.status || "unknown"}`);
     $("h2", node).textContent = program.programName;
-    const tags = $(".tags", node); tags.innerHTML = `<span class="tag">${formatEligibility(program)}</span>${program.operator ? `<span class="tag">${program.operator}</span>` : ""}${program.reviewState === "needs_review" ? '<span class="tag">数据待复核</span>' : ""}`;
+    const tags = $(".tags", node); tags.innerHTML = `<span class="tag">${formatEligibility(program)}</span>${program.operator ? `<span class="tag">${program.operator}</span>` : ""}${program.cycleYear ? `<span class="tag">${program.cycleYear} 申请周期</span>` : ""}<span class="tag">${program.dataOrigin === "manual" ? "人工核验" : "自动核验"}</span>${program.reviewState === "needs_review" ? '<span class="tag">数据待复核</span>' : ""}`;
     const dates = $(".dates", node);
     const rows = [];
     rows.push(["申请开放", dateText(program.applicationOpenDate)]);
     (program.deadlines || []).forEach((deadline) => rows.push([deadline.type, `${dateText(deadline)}${deadline.audience ? `<span class="raw">${deadline.audience}</span>` : ""}`]));
     if (!program.deadlines?.length) rows.push(["申请截止", "官方页面未公布具体日期"]);
+    if (program.status === "closed" && program.cycleYear && program.cycleYear <= new Date().getFullYear()) rows.push(["下一周期", "官方尚未发布下一年度日期"]);
     dates.innerHTML = rows.map(([term, value]) => `<div><dt>${term}</dt><dd>${value}</dd></div>`).join("");
     const eligibilityNote = $(".eligibility-note", node); eligibilityNote.textContent = program.eligibilityNote || "请查看官方页面确认申请资格。";
     const link = $(".source-link", node); link.href = program.sourceUrl || program.programUrl;
+    $(".correction-link", node).href = correctionUrl(program);
     $(".checked-at", node).textContent = relativeChecked(program.lastCheckedAt);
     container.append(node);
   });

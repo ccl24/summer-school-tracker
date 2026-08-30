@@ -1,0 +1,56 @@
+name: Report a program-data correction
+description: Submit an official source that corrects a displayed program date, eligibility rule, or link.
+title: "[correction] "
+labels: ["data-correction"]
+body:
+  - type: markdown
+    attributes:
+      value: "Please provide the university's official page. Reports are reviewed before any public data changes."
+  - type: input
+    id: program-id
+    attributes:
+      label: Program ID
+      description: Pre-filled when opened from a program card.
+      placeholder: e.g. stanford-stanford-summer-humanities-institute
+    validations:
+      required: true
+  - type: input
+    id: program-name
+    attributes:
+      label: Program name
+    validations:
+      required: true
+  - type: dropdown
+    id: field
+    attributes:
+      label: Field that needs correction
+      options: [Application opening date, Application deadline, Eligibility, Program URL, Official source URL, Status, Other]
+    validations:
+      required: true
+  - type: input
+    id: cycle-year
+    attributes:
+      label: Application cycle year
+      placeholder: "2027"
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: Correct information
+      description: Include the date, time, timezone, or eligibility wording exactly as published.
+    validations:
+      required: true
+  - type: input
+    id: official-url
+    attributes:
+      label: Official source URL
+    validations:
+      required: true
+  - type: textarea
+    id: source-text
+    attributes:
+      label: Relevant official wording
+      description: Paste a short excerpt that supports the correction.
+    validations:
+      required: true

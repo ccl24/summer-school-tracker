@@ -32,6 +32,7 @@ PROGRAMS_FILE = DATA / "programs.json"
 SOURCES_FILE = DATA / "sources.json"
 STATE_FILE = DATA / "source-state.json"
 REVIEW_FILE = DATA / "review_issues.json"
+OVERRIDES_FILE = DATA / "manual-overrides.json"
 USER_AGENT = "IvySummerTracker/1.0 (+https://github.com/your-account/ivy-summer-tracker)"
 TIMEOUT_SECONDS = 20
 ROBOTS_CACHE: dict[str, RobotFileParser] = {}
@@ -132,7 +133,7 @@ def normalize_date(match: re.Match[str], raw: str, timezone: str = "ET") -> dict
     return {"date": iso_date, "time": time_value, "timezone": timezone, "raw": raw.strip()}
 
 
-def find_date_after(text: str, label: str, window: int = 220) -> tuple[dict[str, Any], str] | None:
+def find_date_after(text: str, label: str, window: int = 220, timezone: str = "ET") -> tuple[dict[str, Any], str] | None:
     match = re.search(re.escape(label), text, re.IGNORECASE)
     if not match:
         return None
@@ -141,20 +142,61 @@ def find_date_after(text: str, label: str, window: int = 220) -> tuple[dict[str,
     if not date_match:
         return None
     raw = fragment[: date_match.end()]
-    return normalize_date(date_match, raw), raw
+    return normalize_date(date_match, raw, timezone), raw
 
 
-def parse_labelled_dates(source: dict[str, Any], text: str) -> ParseResult:
+def find_date_in_html(html: str, label: str, timezone: str = "ET") -> tuple[dict[str, Any], str] | None:
+    """Read dates from the same table row or nearby labelled content block.
+
+    This deliberately avoids matching a label in one table cell with the first date
+    found elsewhere in flattened page text.
+    """
+    if BeautifulSoup is None:
+        return None
+    soup = BeautifulSoup(html, "html.parser")
+    label_re = re.compile(re.escape(label), re.IGNORECASE)
+    for node in soup.find_all(string=label_re):
+        row = node.find_parent("tr")
+        if row:
+            row_text = row.get_text(" ", strip=True)
+            date_match = DATE_RE.search(row_text)
+            if date_match:
+                return normalize_date(date_match, row_text, timezone), row_text[:600]
+        block = node.find_parent(["li", "p", "div", "section", "article"])
+        if block:
+            block_text = block.get_text(" ", strip=True)
+            date_match = DATE_RE.search(block_text)
+            if date_match:
+                return normalize_date(date_match, block_text, timezone), block_text[:600]
+        sibling_text = str(node)
+        sibling = node.parent.find_next_sibling() if node.parent else None
+        for _ in range(3):
+            if not sibling:
+                break
+            sibling_text += " " + sibling.get_text(" ", strip=True)
+            date_match = DATE_RE.search(sibling_text)
+            if date_match:
+                return normalize_date(date_match, sibling_text, timezone), sibling_text[:600]
+            sibling = sibling.find_next_sibling()
+    return None
+
+
+def parse_labelled_dates(source: dict[str, Any], text: str, html: str | None = None) -> ParseResult:
+    timezone = source.get("timezone", "ET")
     open_date = None
     for label in source.get("openLabels", []):
-        found = find_date_after(text, label)
+        found = find_date_in_html(html, label, timezone) if html else None
+        if not found and not source.get("strictHtml", False):
+            found = find_date_after(text, label, timezone=timezone)
         if found:
             open_date = found[0]
             break
 
     deadlines: list[dict[str, Any]] = []
     for label in source.get("deadlineLabels", []):
-        found = find_date_after(text, label)
+        found = find_date_in_html(html, label, timezone) if html else None
+        if not found and not source.get("strictHtml", False):
+            found = find_date_after(text, label, timezone=timezone)
         if found:
             date, raw = found
             deadlines.append({"type": label, **date, "audience": "See official page", "raw": raw})
@@ -162,7 +204,11 @@ def parse_labelled_dates(source: dict[str, Any], text: str) -> ParseResult:
     if not open_date and not deadlines:
         raise ParseFailure("No configured labelled date could be found")
     excerpt = " | ".join([item["raw"] for item in deadlines] or [open_date["raw"]])[:600]
-    return ParseResult(open_date=open_date, deadlines=deadlines or None, source_text=excerpt)
+    status = None
+    lowered = text.lower()
+    if any(marker.lower() in lowered for marker in source.get("closedMarkers", [])):
+        status = "closed"
+    return ParseResult(open_date=open_date, deadlines=deadlines or None, status=status, source_text=excerpt)
 
 
 def parse_closed_marker(source: dict[str, Any], text: str) -> ParseResult:
@@ -174,10 +220,13 @@ def parse_closed_marker(source: dict[str, Any], text: str) -> ParseResult:
     raise ParseFailure("Configured closed marker not found")
 
 
-def parse_session_dates(source: dict[str, Any], text: str) -> ParseResult:
+def parse_session_dates(source: dict[str, Any], text: str, html: str | None = None) -> ParseResult:
+    timezone = source.get("timezone", "ET")
     deadlines: list[dict[str, Any]] = []
     for label in source.get("deadlineLabels", []):
-        found = find_date_after(text, label, 320)
+        found = find_date_in_html(html, label, timezone) if html else None
+        if not found and not source.get("strictHtml", False):
+            found = find_date_after(text, label, 320, timezone)
         if found:
             date, raw = found
             deadlines.append({"type": label, **date, "audience": "Eligible high school students", "raw": raw})
@@ -186,8 +235,8 @@ def parse_session_dates(source: dict[str, Any], text: str) -> ParseResult:
     return ParseResult(deadlines=deadlines, source_text=" | ".join(item["raw"] for item in deadlines)[:600])
 
 
-def parse_dartmouth_rounds(source: dict[str, Any], text: str) -> ParseResult:
-    result = parse_labelled_dates(source, text)
+def parse_dartmouth_rounds(source: dict[str, Any], text: str, html: str | None = None) -> ParseResult:
+    result = parse_labelled_dates(source, text, html)
     return result
 
 
@@ -236,6 +285,53 @@ def validate_candidate(old: dict[str, Any], candidate: ParseResult) -> None:
     new_years = [item["date"][:4] for item in candidate.deadlines or [] if item.get("date")]
     if old_years and new_years and max(new_years) < min(old_years):
         raise ParseFailure("Unexpected year regression")
+    old_deadlines = [item["date"] for item in old.get("deadlines", []) if item.get("date")]
+    new_deadlines = [item["date"] for item in candidate.deadlines or [] if item.get("date")]
+    if old_deadlines and new_deadlines:
+        if len(new_deadlines) < len(old_deadlines) and max(new_years) <= max(old_years):
+            raise ParseFailure("Deadline count unexpectedly decreased")
+        old_open = (old.get("applicationOpenDate") or {}).get("date")
+        if old_open and old_open in new_deadlines and old_open not in old_deadlines:
+            raise ParseFailure("A deadline unexpectedly matched the prior opening date")
+        if len(old_deadlines) == len(new_deadlines) and max(new_years) == max(old_years):
+            shifts = [abs((datetime.fromisoformat(new) - datetime.fromisoformat(old)).days) for old, new in zip(sorted(old_deadlines), sorted(new_deadlines))]
+            if any(days > 45 for days in shifts):
+                raise ParseFailure("Deadline changed by more than 45 days without an annual rollover")
+
+
+def load_overrides() -> dict[str, dict[str, Any]]:
+    if not OVERRIDES_FILE.exists():
+        return {}
+    entries = load_json(OVERRIDES_FILE).get("overrides", [])
+    return {entry["programId"]: entry for entry in entries}
+
+
+def apply_override(program: dict[str, Any], override: dict[str, Any], checked_at: str) -> None:
+    fields = ("applicationOpenDate", "deadlines", "eligibility", "eligibilityNote", "eligibilitySourceUrl", "status", "sourceUrl", "sourceText")
+    for field in fields:
+        if field in override:
+            program[field] = deepcopy(override[field])
+    program["cycleYear"] = override["cycleYear"]
+    program["dataOrigin"] = "manual"
+    program["verifiedSourceUrl"] = override["verifiedSourceUrl"]
+    program["verifiedAt"] = override["verifiedAt"]
+    program["lastCheckedAt"] = checked_at
+    program["reviewState"] = "verified"
+    program.pop("reviewMessage", None)
+
+
+def conflicts_with_override(program: dict[str, Any], result: ParseResult) -> bool:
+    def date_key(value: dict[str, Any] | None) -> tuple[Any, Any, Any] | None:
+        return None if not value else (value.get("date"), value.get("time"), value.get("timezone"))
+
+    if result.open_date and date_key(result.open_date) != date_key(program.get("applicationOpenDate")):
+        return True
+    if result.deadlines:
+        candidate = sorted((item.get("type"), *date_key(item)) for item in result.deadlines)
+        trusted = sorted((item.get("type"), *date_key(item)) for item in program.get("deadlines", []))
+        if candidate != trusted:
+            return True
+    return bool(result.status and result.status != program.get("status"))
 
 
 def apply_result(program: dict[str, Any], result: ParseResult, checked_at: str) -> bool:
@@ -251,6 +347,10 @@ def apply_result(program: dict[str, Any], result: ParseResult, checked_at: str) 
     program["sourceText"] = result.source_text[:600]
     program["lastCheckedAt"] = checked_at
     program["reviewState"] = "verified"
+    program["dataOrigin"] = "automatic"
+    deadline_years = [item["date"][:4] for item in program.get("deadlines", []) if item.get("date")]
+    if deadline_years:
+        program["cycleYear"] = int(max(deadline_years))
     program.pop("reviewMessage", None)
     changed = {key: value for key, value in before.items() if key not in {"lastCheckedAt", "lastChangedAt"}} != {
         key: value for key, value in program.items() if key not in {"lastCheckedAt", "lastChangedAt"}
@@ -272,8 +372,12 @@ def run(fetcher=fetch) -> int:
     sources = load_json(SOURCES_FILE)
     state = load_json(STATE_FILE)
     programs = {program["id"]: program for program in document["programs"]}
+    overrides = load_overrides()
     checked_at = utc_now()
     review_items: list[dict[str, str]] = []
+    for program_id, override in overrides.items():
+        if program_id in programs:
+            apply_override(programs[program_id], override, checked_at)
 
     for source in sources:
         linked = [programs[program_id] for program_id in source["programIds"]]
@@ -281,8 +385,12 @@ def run(fetcher=fetch) -> int:
             html = fetcher(source["url"])
             text = clean_text(html)
             parser = PARSERS[source["parser"]]
-            result = parser(source, text)
+            result = parser(source, text, html) if source["parser"] in {"labelled_dates", "session_dates", "dartmouth_rounds"} else parser(source, text)
             for program in linked:
+                if program["id"] in overrides:
+                    if conflicts_with_override(program, result):
+                        review_items.append(add_review(program, source, "Automated candidate conflicts with a manual override", checked_at))
+                    continue
                 validate_candidate(program, result)
                 apply_result(program, result, checked_at)
             state[source["id"]] = {"hash": hashlib.sha256(text.encode("utf-8")).hexdigest(), "fetchedAt": checked_at, "url": source["url"]}

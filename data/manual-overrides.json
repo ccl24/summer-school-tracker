@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "overrides": [
+    {
+      "programId": "stanford-stanford-pre-collegiate-summer-institutes",
+      "cycleYear": 2026,
+      "deadlines": [
+        {
+          "type": "Application Deadline",
+          "date": "2026-03-13",
+          "time": "23:59",
+          "timezone": "PT",
+          "audience": "Eligible applicants",
+          "raw": "Friday, March 13, 2026 at 11:59pm Pacific Time"
+        }
+      ],
+      "eligibility": "international_allowed",
+      "eligibilityNote": "Students currently in grades 8–11; financial aid is available to domestic and international participants.",
+      "eligibilitySourceUrl": "https://summerinstitutes.spcs.stanford.edu/admissions",
+      "status": "closed",
+      "sourceUrl": "https://summerinstitutes.spcs.stanford.edu/admissions",
+      "sourceText": "Summer 2026 Admissions: Application Deadline Friday, March 13, 2026 at 11:59pm Pacific Time. The application is currently closed.",
+      "verifiedSourceUrl": "https://summerinstitutes.spcs.stanford.edu/admissions",
+      "verifiedAt": "2026-08-30T00:00:00Z",
+      "note": "Manually verified against Stanford's official admissions page."
+    },
+    {
+      "programId": "stanford-stanford-summer-humanities-institute",
+      "cycleYear": 2026,
+      "deadlines": [
+        {
+          "type": "Application Deadline",
+          "date": "2026-02-02",
+          "time": "23:59",
+          "timezone": "PT",
+          "audience": "Eligible applicants",
+          "raw": "Monday, February 2, 2026 at 11:59 pm Pacific Time"
+        }
+      ],
+      "eligibility": "international_allowed",
+      "eligibilityNote": "Open to students in grades 10–11 at application, who are age 15–17 during the program; international applicants may apply.",
+      "eligibilitySourceUrl": "https://summerhumanities.spcs.stanford.edu/admissions-humanities",
+      "status": "closed",
+      "sourceUrl": "https://summerhumanities.spcs.stanford.edu/admissions-humanities",
+      "sourceText": "Summer 2026 Admissions: Application Deadline Monday, February 2, 2026 at 11:59 pm Pacific Time. The application is currently closed.",
+      "verifiedSourceUrl": "https://summerhumanities.spcs.stanford.edu/admissions-humanities",
+      "verifiedAt": "2026-08-30T00:00:00Z",
+      "note": "Manually verified against Stanford's official Summer Humanities Institute admissions page."
+    }
+  ]
+}

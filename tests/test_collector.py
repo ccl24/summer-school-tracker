@@ -46,6 +46,41 @@ class CollectorTests(unittest.TestCase):
         self.assertEqual(collector.derive_status({"deadlines": [{"date": "2026-05-01"}]}, "2026-08-30"), "closed")
         self.assertEqual(collector.derive_status({"applicationOpenDate": {"date": "2027-01-01"}, "deadlines": [{"date": "2027-05-01"}]}, "2026-08-30"), "upcoming")
 
+    def test_table_parser_keeps_label_and_date_in_the_same_row(self):
+        html = (FIXTURES / "cornell-table.html").read_text(encoding="utf-8")
+        text = collector.clean_text(html)
+        result = collector.parse_labelled_dates(
+            {"openLabels": ["Applications Open"], "deadlineLabels": ["Application form due"], "strictHtml": True}, text, html
+        )
+        self.assertEqual(result.open_date["date"], "2026-01-12")
+        self.assertEqual(result.deadlines[0]["date"], "2026-05-14")
+
+    def test_stanford_sources_are_independent(self):
+        summer_html = (FIXTURES / "stanford-summer-institutes.html").read_text(encoding="utf-8")
+        humanities_html = (FIXTURES / "stanford-humanities.html").read_text(encoding="utf-8")
+        source = {"openLabels": [], "deadlineLabels": ["Application Deadline"], "closedMarkers": ["application is currently closed"], "timezone": "PT", "strictHtml": True}
+        summer = collector.parse_labelled_dates(source, collector.clean_text(summer_html), summer_html)
+        humanities = collector.parse_labelled_dates(source, collector.clean_text(humanities_html), humanities_html)
+        self.assertEqual(summer.deadlines[0]["date"], "2026-03-13")
+        self.assertEqual(humanities.deadlines[0]["date"], "2026-02-02")
+        self.assertEqual(humanities.deadlines[0]["timezone"], "PT")
+        self.assertEqual(summer.status, "closed")
+        self.assertEqual(humanities.status, "closed")
+
+    def test_manual_override_is_not_replaced_by_candidate(self):
+        program = {"id": "test", "deadlines": [{"type": "Application Deadline", "date": "2026-02-02", "time": "23:59", "timezone": "PT"}]}
+        override = {"programId": "test", "cycleYear": 2026, "deadlines": program["deadlines"], "status": "closed", "verifiedSourceUrl": "https://example.edu", "verifiedAt": "2026-08-30T00:00:00Z"}
+        collector.apply_override(program, override, "2026-08-30T01:00:00Z")
+        candidate = collector.ParseResult(deadlines=[{"type": "Application Deadline", "date": "2026-03-13", "time": "23:59", "timezone": "PT"}])
+        self.assertTrue(collector.conflicts_with_override(program, candidate))
+        self.assertEqual(program["deadlines"][0]["date"], "2026-02-02")
+
+    def test_rejects_deadline_count_decrease(self):
+        old = {"deadlines": [{"date": "2026-04-28"}, {"date": "2026-05-14"}]}
+        candidate = collector.ParseResult(deadlines=[{"date": "2026-05-14", "time": None, "timezone": "ET", "raw": "May 14, 2026"}])
+        with self.assertRaises(collector.ParseFailure):
+            collector.validate_candidate(old, candidate)
+
 
 if __name__ == "__main__":
     unittest.main()
