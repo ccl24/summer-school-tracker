@@ -13,5 +13,15 @@
     "key": "columbia-dates",
     "title": "[review] columbia-dates",
     "body": "Source: https://precollege.sps.columbia.edu/admissions/dates-and-deadlines\n\nCollector did not publish new data.\n\nReason: Configured closed marker not found"
+  },
+  {
+    "key": "stanford-summer-institutes",
+    "title": "[review] stanford-summer-institutes",
+    "body": "Source: https://summerinstitutes.spcs.stanford.edu/admissions\n\nCollector did not publish new data.\n\nReason: No configured labelled date could be found"
+  },
+  {
+    "key": "stanford-summer-humanities",
+    "title": "[review] stanford-summer-humanities",
+    "body": "Source: https://summerhumanities.spcs.stanford.edu/admissions-humanities\n\nCollector did not publish new data.\n\nReason: No configured labelled date could be found"
   }
 ]
