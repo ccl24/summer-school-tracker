@@ -1,2 +1,17 @@
-[]
-
+[
+  {
+    "key": "yale-precollege",
+    "title": "[review] yale-precollege",
+    "body": "Source: https://summer.yale.edu/apply/pre-college-students\n\nCollector did not publish new data.\n\nReason: No configured labelled date could be found"
+  },
+  {
+    "key": "princeton-llp",
+    "title": "[review] princeton-llp",
+    "body": "Source: https://scienceoutreach.princeton.edu/laboratory-learning-program\n\nCollector did not publish new data.\n\nReason: 403 Client Error: Forbidden for url: https://scienceoutreach.princeton.edu/laboratory-learning-program"
+  },
+  {
+    "key": "columbia-dates",
+    "title": "[review] columbia-dates",
+    "body": "Source: https://precollege.sps.columbia.edu/admissions/dates-and-deadlines\n\nCollector did not publish new data.\n\nReason: Configured closed marker not found"
+  }
+]
