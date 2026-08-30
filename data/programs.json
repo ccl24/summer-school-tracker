@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-30T06:57:09Z",
+  "generatedAt": "2026-08-30T07:26:26Z",
   "programs": [
     {
       "id": "harvard-high-school-programs",
@@ -10,11 +10,19 @@
       "applicationOpenDate": null,
       "deadlines": [
         {
+          "type": "International student deadline",
+          "date": "2026-02-11",
+          "time": "17:00",
+          "timezone": "ET",
+          "raw": "International student deadline (Secondary School Program Only)* International 4-Week SSP, 7-Week SSP Residential, or 7-Week SSP Commuting applicants must complete their application by this date in order to apply on time for an I-20 and a Student Visa. International 7-Week SSP Online applicants have until the late application deadline to complete the program application. Current U.S. visa holders whose visa permits for-credit study have until the late application deadline to complete their application. Wednesday, February 11, 2026 Tuesday, March 10, 2026, by 5 p.m. ET Tuesday, March 24, 2026",
+          "audience": "See official page"
+        },
+        {
           "type": "Late application deadline",
           "date": "2026-02-11",
-          "time": null,
+          "time": "17:00",
           "timezone": "ET",
-          "raw": "late application deadline to complete the program application. Current U.S. visa holders whose visa permits for-credit study have until the late application deadline to complete their application. Wednesday, February 11, 2026",
+          "raw": "International student deadline (Secondary School Program Only)* International 4-Week SSP, 7-Week SSP Residential, or 7-Week SSP Commuting applicants must complete their application by this date in order to apply on time for an I-20 and a Student Visa. International 7-Week SSP Online applicants have until the late application deadline to complete the program application. Current U.S. visa holders whose visa permits for-credit study have until the late application deadline to complete their application. Wednesday, February 11, 2026 Tuesday, March 10, 2026, by 5 p.m. ET Tuesday, March 24, 2026",
           "audience": "See official page"
         }
       ],
@@ -23,10 +31,12 @@
       "eligibilitySourceUrl": "https://summer.harvard.edu/high-school/admissions/",
       "status": "closed",
       "sourceUrl": "https://summer.harvard.edu/high-school/admissions/",
-      "sourceText": "late application deadline to complete the program application. Current U.S. visa holders whose visa permits for-credit study have until the late application deadline to complete their application. Wednesday, February 11, 2026",
-      "lastCheckedAt": "2026-08-30T06:57:09Z",
-      "lastChangedAt": "2026-08-30T06:57:09Z",
-      "reviewState": "verified"
+      "sourceText": "International student deadline (Secondary School Program Only)* International 4-Week SSP, 7-Week SSP Residential, or 7-Week SSP Commuting applicants must complete their application by this date in order to apply on time for an I-20 and a Student Visa. International 7-Week SSP Online applicants have until the late application deadline to complete the program application. Current U.S. visa holders whose visa permits for-credit study have until the late application deadline to complete their application. Wednesday, February 11, 2026 Tuesday, March 10, 2026, by 5 p.m. ET Tuesday, March 24, 2026 | ",
+      "lastCheckedAt": "2026-08-30T07:26:26Z",
+      "lastChangedAt": "2026-08-30T07:26:26Z",
+      "reviewState": "verified",
+      "dataOrigin": "automatic",
+      "cycleYear": 2026
     },
     {
       "id": "brown-pre-college",
@@ -55,9 +65,11 @@
       "status": "closed",
       "sourceUrl": "https://precollege.brown.edu/apply",
       "sourceText": "Application Deadline Friday, May 15, 2026",
-      "lastCheckedAt": "2026-08-30T06:57:09Z",
-      "lastChangedAt": "2026-08-30T06:57:09Z",
-      "reviewState": "verified"
+      "lastCheckedAt": "2026-08-30T07:26:26Z",
+      "lastChangedAt": "2026-08-30T07:26:26Z",
+      "reviewState": "verified",
+      "dataOrigin": "automatic",
+      "cycleYear": 2026
     },
     {
       "id": "yale-summer-session-pre-college",
@@ -81,7 +93,7 @@
       "status": "closed",
       "sourceUrl": "https://summer.yale.edu/apply/pre-college-students",
       "sourceText": "Yale identifies eligibility for pre-college students and uses priority, regular, and rolling rounds.",
-      "lastCheckedAt": "2026-08-30T06:57:09Z",
+      "lastCheckedAt": "2026-08-30T07:26:26Z",
       "lastChangedAt": "2026-08-30T00:00:00Z",
       "reviewState": "needs_review",
       "reviewMessage": "No configured labelled date could be found"
@@ -98,15 +110,15 @@
           "date": "2026-10-15",
           "time": "23:59",
           "timezone": "ET",
-          "raw": "Early Action Application Deadline 11:59pm ET on October 15, 2026",
+          "raw": "Please register for our free Choosing Your Deadline webinar for more information. YYGS applications will be read and reviewed on a rolling basis. In fairness to all applicants, admissions decisions will NOT be made nor released until all applications from your respective applicant pool have been reviewed. Please know that we will release decisions as soon as possible, and decisions will be released no later than the decision release dates listed below. YYGS will ensure that significant need-based financial aid is available for qualified applicants who submit their applications during either ap",
           "audience": "See official page"
         },
         {
           "type": "Regular Decision",
-          "date": "2027-01-06",
+          "date": "2026-10-15",
           "time": "23:59",
           "timezone": "ET",
-          "raw": "Regular Decision Application Deadline 11:59pm ET on January 6, 2027",
+          "raw": "Please register for our free Choosing Your Deadline webinar for more information. YYGS applications will be read and reviewed on a rolling basis. In fairness to all applicants, admissions decisions will NOT be made nor released until all applications from your respective applicant pool have been reviewed. Please know that we will release decisions as soon as possible, and decisions will be released no later than the decision release dates listed below. YYGS will ensure that significant need-based financial aid is available for qualified applicants who submit their applications during either ap",
           "audience": "See official page"
         }
       ],
@@ -116,9 +128,11 @@
       "status": "upcoming",
       "sourceUrl": "https://globalscholars.yale.edu/application-deadlines",
       "sourceText": "s. Immerse yourself in a global learning community at Yale University. THE YYGS APPLICATION WILL OPEN SOON. YYGS is excited to offer residential sessions for June & July 2027. We are not offering online sessions at this time. The YYGS application will open soon. Sign up for our mailing list to receive updates about YYGS 2027. We anticipate that the application will open by the end of September. SUMMER 2027 ",
-      "lastCheckedAt": "2026-08-30T06:57:09Z",
-      "lastChangedAt": "2026-08-30T06:57:09Z",
-      "reviewState": "verified"
+      "lastCheckedAt": "2026-08-30T07:26:26Z",
+      "lastChangedAt": "2026-08-30T07:26:26Z",
+      "reviewState": "verified",
+      "dataOrigin": "automatic",
+      "cycleYear": 2026
     },
     {
       "id": "princeton-laboratory-learning",
@@ -133,7 +147,7 @@
       "status": "closed",
       "sourceUrl": "https://scienceoutreach.princeton.edu/laboratory-learning-program",
       "sourceText": "The official 2026 page states the local-NJ application process is closed.",
-      "lastCheckedAt": "2026-08-30T06:57:09Z",
+      "lastCheckedAt": "2026-08-30T07:26:26Z",
       "lastChangedAt": "2026-08-30T00:00:00Z",
       "reviewState": "needs_review",
       "reviewMessage": "403 Client Error: Forbidden for url: https://scienceoutreach.princeton.edu/laboratory-learning-program"
@@ -151,7 +165,7 @@
       "status": "closed",
       "sourceUrl": "https://precollege.sps.columbia.edu/admissions/dates-and-deadlines",
       "sourceText": "The Summer 2026 dates page marks application/early-registration deadlines as Closed.",
-      "lastCheckedAt": "2026-08-30T06:57:09Z",
+      "lastCheckedAt": "2026-08-30T07:26:26Z",
       "lastChangedAt": "2026-08-30T00:00:00Z",
       "reviewState": "needs_review",
       "reviewMessage": "Configured closed marker not found"
@@ -168,7 +182,7 @@
           "date": "2026-03-25",
           "time": null,
           "timezone": "ET",
-          "raw": "Summer 1, 2026: May 26 - July 1 March 25, 2026",
+          "raw": "Summer 1, 2026: May 26 - July 1 March 25, 2026 April 15, 2026",
           "audience": "Eligible high school students"
         },
         {
@@ -176,7 +190,7 @@
           "date": "2026-05-06",
           "time": null,
           "timezone": "ET",
-          "raw": "Summer 2, 2026: July 2 - August 7 May 6, 2026",
+          "raw": "Summer 2, 2026: July 2 - August 7 May 6, 2026 May 27, 2026",
           "audience": "Eligible high school students"
         }
       ],
@@ -185,10 +199,12 @@
       "eligibilitySourceUrl": "https://globalyouth.wharton.upenn.edu/pre-baccalaureate-program/",
       "status": "closed",
       "sourceUrl": "https://globalyouth.wharton.upenn.edu/pre-baccalaureate-program/admissions/",
-      "sourceText": "Summer 1, 2026: May 26 - July 1 March 25, 2026 | Summer 2, 2026: July 2 - August 7 May 6, 2026",
-      "lastCheckedAt": "2026-08-30T06:57:09Z",
-      "lastChangedAt": "2026-08-30T06:57:09Z",
-      "reviewState": "verified"
+      "sourceText": "Summer 1, 2026: May 26 - July 1 March 25, 2026 April 15, 2026 | Summer 2, 2026: July 2 - August 7 May 6, 2026 May 27, 2026",
+      "lastCheckedAt": "2026-08-30T07:26:26Z",
+      "lastChangedAt": "2026-08-30T07:26:26Z",
+      "reviewState": "verified",
+      "dataOrigin": "automatic",
+      "cycleYear": 2026
     },
     {
       "id": "cornell-precollege-studies",
@@ -199,7 +215,7 @@
         "date": "2026-01-12",
         "time": null,
         "timezone": "ET",
-        "raw": "Applications Open Application form due Application materials due Enrollment deposit deadline Final payment deadline Three-week session 1 June 1–18, 2026 January 12, 2026"
+        "raw": "Session Course Dates Applications Open Application form due Application materials due Enrollment deposit deadline Final payment deadline Three-week session 1 June 1–18, 2026 January 12, 2026 April 28, 2026 May 5, 2026 May 12, 2026 May 19, 2026 Three-week session 2 June 22–July 10, 2026 January 12, 2026 May 14, 2026* May 19, 2026 June 2, 2026 June 9, 2026 Three-week session 3 July 13–July 31, 2026 January 12, 2026 June 2, 2026 June 16, 2026 June 30, 2026 July 7, 2026 Six-week session June 22–July 31, 2026 January 12, 2026 May 14, 2026* May 19, 2026 June 2, 2026 June 9, 2026 * Application form due dates for 2026 have been extended from May 5, 2026."
       },
       "deadlines": [
         {
@@ -207,7 +223,7 @@
           "date": "2026-01-12",
           "time": null,
           "timezone": "ET",
-          "raw": "Application form due Application materials due Enrollment deposit deadline Final payment deadline Three-week session 1 June 1–18, 2026 January 12, 2026",
+          "raw": "Session Course Dates Applications Open Application form due Application materials due Enrollment deposit deadline Final payment deadline Three-week session 1 June 1–18, 2026 January 12, 2026 April 28, 2026 May 5, 2026 May 12, 2026 May 19, 2026 Three-week session 2 June 22–July 10, 2026 January 12, 2026 May 14, 2026* May 19, 2026 June 2, 2026 June 9, 2026 Three-week session 3 July 13–July 31, 2026 January 12, 2026 June 2, 2026 June 16, 2026 June 30, 2026 July 7, 2026 Six-week session June 22–July 31, 2026 January 12, 2026 May 14, 2026* May 19, 2026 June 2, 2026 June 9, 2026 * Application form d",
           "audience": "See official page"
         }
       ],
@@ -216,10 +232,12 @@
       "eligibilitySourceUrl": "https://sce.cornell.edu/pc-apply-eligibility/",
       "status": "closed",
       "sourceUrl": "https://sce.cornell.edu/pc-dates-summer/",
-      "sourceText": "Application form due Application materials due Enrollment deposit deadline Final payment deadline Three-week session 1 June 1–18, 2026 January 12, 2026",
-      "lastCheckedAt": "2026-08-30T06:57:09Z",
-      "lastChangedAt": "2026-08-30T06:57:09Z",
-      "reviewState": "verified"
+      "sourceText": "Session Course Dates Applications Open Application form due Application materials due Enrollment deposit deadline Final payment deadline Three-week session 1 June 1–18, 2026 January 12, 2026 April 28, 2026 May 5, 2026 May 12, 2026 May 19, 2026 Three-week session 2 June 22–July 10, 2026 January 12, 2026 May 14, 2026* May 19, 2026 June 2, 2026 June 9, 2026 Three-week session 3 July 13–July 31, 2026 January 12, 2026 June 2, 2026 June 16, 2026 June 30, 2026 July 7, 2026 Six-week session June 22–July 31, 2026 January 12, 2026 May 14, 2026* May 19, 2026 June 2, 2026 June 9, 2026 * Application form d",
+      "lastCheckedAt": "2026-08-30T07:26:26Z",
+      "lastChangedAt": "2026-08-30T07:26:26Z",
+      "reviewState": "verified",
+      "dataOrigin": "automatic",
+      "cycleYear": 2026
     },
     {
       "id": "dartmouth-precollege-summer-scholars",
@@ -230,7 +248,7 @@
         "date": "2025-10-01",
         "time": null,
         "timezone": "ET",
-        "raw": "Applications for our 2026 programs launched on October 1, 2025"
+        "raw": "Applications for our 2026 programs launched on October 1, 2025."
       },
       "deadlines": [
         {
@@ -263,10 +281,12 @@
       "eligibilitySourceUrl": "https://precollege.dartmouth.edu/programs/precollege-summer-scholars",
       "status": "closed",
       "sourceUrl": "https://precollege.dartmouth.edu/apply",
-      "sourceText": "Applications for our 2026 programs launched on October 1, 2025",
-      "lastCheckedAt": "2026-08-30T06:57:09Z",
-      "lastChangedAt": "2026-08-30T06:57:09Z",
-      "reviewState": "verified"
+      "sourceText": "Applications for our 2026 programs launched on October 1, 2025.",
+      "lastCheckedAt": "2026-08-30T07:26:26Z",
+      "lastChangedAt": "2026-08-30T07:26:26Z",
+      "reviewState": "verified",
+      "dataOrigin": "automatic",
+      "cycleYear": 2026
     },
     {
       "id": "nyu-precollege",
@@ -298,7 +318,7 @@
           "date": "2026-12-01",
           "time": null,
           "timezone": "ET",
-          "raw": "application deadline is December 1, 2026",
+          "raw": "The summer 2027 application is open. The application deadline is December 1, 2026.",
           "audience": "See official page"
         }
       ],
@@ -308,10 +328,12 @@
       "operator": "校方直属",
       "status": "open",
       "sourceUrl": "https://tisch.nyu.edu/special-programs/high-school-programs/tisch-summer-high-school",
-      "sourceText": "application deadline is December 1, 2026",
-      "lastCheckedAt": "2026-08-30T06:57:09Z",
-      "lastChangedAt": "2026-08-30T06:57:09Z",
-      "reviewState": "verified"
+      "sourceText": "The summer 2027 application is open. The application deadline is December 1, 2026.",
+      "lastCheckedAt": "2026-08-30T07:26:26Z",
+      "lastChangedAt": "2026-08-30T07:26:26Z",
+      "reviewState": "verified",
+      "dataOrigin": "automatic",
+      "cycleYear": 2026
     },
     {
       "id": "nyu-sps-career-edge",
@@ -1597,7 +1619,16 @@
       "programName": "Stanford Pre-Collegiate Summer Institutes",
       "programUrl": "https://summerinstitutes.spcs.stanford.edu/admissions",
       "applicationOpenDate": null,
-      "deadlines": [{"type":"Application Deadline","date":"2026-03-13","time":"23:59","timezone":"PT","audience":"Eligible applicants","raw":"Friday, March 13, 2026 at 11:59pm Pacific Time"}],
+      "deadlines": [
+        {
+          "type": "Application Deadline",
+          "date": "2026-03-13",
+          "time": "23:59",
+          "timezone": "PT",
+          "audience": "Eligible applicants",
+          "raw": "Friday, March 13, 2026 at 11:59pm Pacific Time"
+        }
+      ],
       "eligibility": "international_allowed",
       "eligibilityNote": "Students currently in grades 8–11; financial aid is available to domestic and international participants.",
       "eligibilitySourceUrl": "https://summerinstitutes.spcs.stanford.edu/admissions",
@@ -1609,9 +1640,10 @@
       "dataOrigin": "manual",
       "verifiedSourceUrl": "https://summerinstitutes.spcs.stanford.edu/admissions",
       "verifiedAt": "2026-08-30T00:00:00Z",
-      "lastCheckedAt": "2026-08-30T00:00:00Z",
+      "lastCheckedAt": "2026-08-30T07:26:26Z",
       "lastChangedAt": "2026-08-30T00:00:00Z",
-      "reviewState": "verified"
+      "reviewState": "needs_review",
+      "reviewMessage": "No configured labelled date could be found"
     },
     {
       "id": "stanford-stanford-summer-humanities-institute",
@@ -1619,7 +1651,16 @@
       "programName": "Stanford Summer Humanities Institute",
       "programUrl": "https://summerhumanities.spcs.stanford.edu/admissions-humanities",
       "applicationOpenDate": null,
-      "deadlines": [{"type":"Application Deadline","date":"2026-02-02","time":"23:59","timezone":"PT","audience":"Eligible applicants","raw":"Monday, February 2, 2026 at 11:59 pm Pacific Time"}],
+      "deadlines": [
+        {
+          "type": "Application Deadline",
+          "date": "2026-02-02",
+          "time": "23:59",
+          "timezone": "PT",
+          "audience": "Eligible applicants",
+          "raw": "Monday, February 2, 2026 at 11:59 pm Pacific Time"
+        }
+      ],
       "eligibility": "international_allowed",
       "eligibilityNote": "Open to students in grades 10–11 at application, who are age 15–17 during the program; international applicants may apply.",
       "eligibilitySourceUrl": "https://summerhumanities.spcs.stanford.edu/admissions-humanities",
@@ -1631,9 +1672,10 @@
       "dataOrigin": "manual",
       "verifiedSourceUrl": "https://summerhumanities.spcs.stanford.edu/admissions-humanities",
       "verifiedAt": "2026-08-30T00:00:00Z",
-      "lastCheckedAt": "2026-08-30T00:00:00Z",
+      "lastCheckedAt": "2026-08-30T07:26:26Z",
       "lastChangedAt": "2026-08-30T00:00:00Z",
-      "reviewState": "verified"
+      "reviewState": "needs_review",
+      "reviewMessage": "No configured labelled date could be found"
     },
     {
       "id": "third-party-national-youth-leadership-forum-medicine",
