@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-30T00:00:00Z",
+  "generatedAt": "2026-08-30T06:57:09Z",
   "programs": [
     {
       "id": "harvard-high-school-programs",
@@ -10,12 +10,12 @@
       "applicationOpenDate": null,
       "deadlines": [
         {
-          "type": "Late application",
-          "date": "2026-04-01",
+          "type": "Late application deadline",
+          "date": "2026-02-11",
           "time": null,
           "timezone": "ET",
-          "audience": "All eligible applicants",
-          "raw": "Wednesday, April 1, 2026"
+          "raw": "late application deadline to complete the program application. Current U.S. visa holders whose visa permits for-credit study have until the late application deadline to complete their application. Wednesday, February 11, 2026",
+          "audience": "See official page"
         }
       ],
       "eligibility": "international_allowed",
@@ -23,9 +23,9 @@
       "eligibilitySourceUrl": "https://summer.harvard.edu/high-school/admissions/",
       "status": "closed",
       "sourceUrl": "https://summer.harvard.edu/high-school/admissions/",
-      "sourceText": "High School Programs admissions calendar lists regular, international, and late application deadlines.",
-      "lastCheckedAt": "2026-08-30T00:00:00Z",
-      "lastChangedAt": "2026-08-30T00:00:00Z",
+      "sourceText": "late application deadline to complete the program application. Current U.S. visa holders whose visa permits for-credit study have until the late application deadline to complete their application. Wednesday, February 11, 2026",
+      "lastCheckedAt": "2026-08-30T06:57:09Z",
+      "lastChangedAt": "2026-08-30T06:57:09Z",
       "reviewState": "verified"
     },
     {
@@ -37,16 +37,16 @@
         "date": "2026-01-14",
         "time": null,
         "timezone": "ET",
-        "raw": "Wednesday, January 14, 2026"
+        "raw": "Application Opens Wednesday, January 14, 2026"
       },
       "deadlines": [
         {
-          "type": "Application deadline",
+          "type": "Application Deadline",
           "date": "2026-05-15",
           "time": null,
           "timezone": "ET",
-          "audience": "General",
-          "raw": "Friday, May 15, 2026"
+          "raw": "Application Deadline Friday, May 15, 2026",
+          "audience": "See official page"
         }
       ],
       "eligibility": "international_allowed",
@@ -54,9 +54,9 @@
       "eligibilitySourceUrl": "https://precollege.brown.edu/apply",
       "status": "closed",
       "sourceUrl": "https://precollege.brown.edu/apply",
-      "sourceText": "Summer 2026 Application Dates and Deadlines.",
-      "lastCheckedAt": "2026-08-30T00:00:00Z",
-      "lastChangedAt": "2026-08-30T00:00:00Z",
+      "sourceText": "Application Deadline Friday, May 15, 2026",
+      "lastCheckedAt": "2026-08-30T06:57:09Z",
+      "lastChangedAt": "2026-08-30T06:57:09Z",
       "reviewState": "verified"
     },
     {
@@ -81,9 +81,10 @@
       "status": "closed",
       "sourceUrl": "https://summer.yale.edu/apply/pre-college-students",
       "sourceText": "Yale identifies eligibility for pre-college students and uses priority, regular, and rolling rounds.",
-      "lastCheckedAt": "2026-08-30T00:00:00Z",
+      "lastCheckedAt": "2026-08-30T06:57:09Z",
       "lastChangedAt": "2026-08-30T00:00:00Z",
-      "reviewState": "verified"
+      "reviewState": "needs_review",
+      "reviewMessage": "No configured labelled date could be found"
     },
     {
       "id": "yale-young-global-scholars",
@@ -97,16 +98,16 @@
           "date": "2026-10-15",
           "time": "23:59",
           "timezone": "ET",
-          "audience": "All eligible applicants",
-          "raw": "11:59pm ET on October 15, 2026"
+          "raw": "Early Action Application Deadline 11:59pm ET on October 15, 2026",
+          "audience": "See official page"
         },
         {
           "type": "Regular Decision",
           "date": "2027-01-06",
           "time": "23:59",
           "timezone": "ET",
-          "audience": "All eligible applicants",
-          "raw": "11:59pm ET on January 6, 2027"
+          "raw": "Regular Decision Application Deadline 11:59pm ET on January 6, 2027",
+          "audience": "See official page"
         }
       ],
       "eligibility": "international_allowed",
@@ -114,9 +115,9 @@
       "eligibilitySourceUrl": "https://globalscholars.yale.edu/eligibility",
       "status": "upcoming",
       "sourceUrl": "https://globalscholars.yale.edu/application-deadlines",
-      "sourceText": "The 2027 application is expected to open by the end of September; Early Action and Regular Decision deadlines are published.",
-      "lastCheckedAt": "2026-08-30T00:00:00Z",
-      "lastChangedAt": "2026-08-30T00:00:00Z",
+      "sourceText": "s. Immerse yourself in a global learning community at Yale University. THE YYGS APPLICATION WILL OPEN SOON. YYGS is excited to offer residential sessions for June & July 2027. We are not offering online sessions at this time. The YYGS application will open soon. Sign up for our mailing list to receive updates about YYGS 2027. We anticipate that the application will open by the end of September. SUMMER 2027 ",
+      "lastCheckedAt": "2026-08-30T06:57:09Z",
+      "lastChangedAt": "2026-08-30T06:57:09Z",
       "reviewState": "verified"
     },
     {
@@ -132,9 +133,10 @@
       "status": "closed",
       "sourceUrl": "https://scienceoutreach.princeton.edu/laboratory-learning-program",
       "sourceText": "The official 2026 page states the local-NJ application process is closed.",
-      "lastCheckedAt": "2026-08-30T00:00:00Z",
+      "lastCheckedAt": "2026-08-30T06:57:09Z",
       "lastChangedAt": "2026-08-30T00:00:00Z",
-      "reviewState": "verified"
+      "reviewState": "needs_review",
+      "reviewMessage": "403 Client Error: Forbidden for url: https://scienceoutreach.princeton.edu/laboratory-learning-program"
     },
     {
       "id": "columbia-pre-college",
@@ -149,9 +151,10 @@
       "status": "closed",
       "sourceUrl": "https://precollege.sps.columbia.edu/admissions/dates-and-deadlines",
       "sourceText": "The Summer 2026 dates page marks application/early-registration deadlines as Closed.",
-      "lastCheckedAt": "2026-08-30T00:00:00Z",
+      "lastCheckedAt": "2026-08-30T06:57:09Z",
       "lastChangedAt": "2026-08-30T00:00:00Z",
-      "reviewState": "verified"
+      "reviewState": "needs_review",
+      "reviewMessage": "Configured closed marker not found"
     },
     {
       "id": "penn-wharton-pre-baccalaureate",
@@ -161,20 +164,20 @@
       "applicationOpenDate": null,
       "deadlines": [
         {
-          "type": "Summer 1",
+          "type": "Summer 1, 2026",
           "date": "2026-03-25",
           "time": null,
           "timezone": "ET",
-          "audience": "Eligible high school juniors and seniors",
-          "raw": "Summer 1, 2026: March 25, 2026"
+          "raw": "Summer 1, 2026: May 26 - July 1 March 25, 2026",
+          "audience": "Eligible high school students"
         },
         {
-          "type": "Summer 2",
+          "type": "Summer 2, 2026",
           "date": "2026-05-06",
           "time": null,
           "timezone": "ET",
-          "audience": "Eligible high school juniors and seniors",
-          "raw": "Summer 2, 2026: May 6, 2026"
+          "raw": "Summer 2, 2026: July 2 - August 7 May 6, 2026",
+          "audience": "Eligible high school students"
         }
       ],
       "eligibility": "international_allowed",
@@ -182,9 +185,9 @@
       "eligibilitySourceUrl": "https://globalyouth.wharton.upenn.edu/pre-baccalaureate-program/",
       "status": "closed",
       "sourceUrl": "https://globalyouth.wharton.upenn.edu/pre-baccalaureate-program/admissions/",
-      "sourceText": "Admissions page lists application deadlines by summer session.",
-      "lastCheckedAt": "2026-08-30T00:00:00Z",
-      "lastChangedAt": "2026-08-30T00:00:00Z",
+      "sourceText": "Summer 1, 2026: May 26 - July 1 March 25, 2026 | Summer 2, 2026: July 2 - August 7 May 6, 2026",
+      "lastCheckedAt": "2026-08-30T06:57:09Z",
+      "lastChangedAt": "2026-08-30T06:57:09Z",
       "reviewState": "verified"
     },
     {
@@ -196,24 +199,16 @@
         "date": "2026-01-12",
         "time": null,
         "timezone": "ET",
-        "raw": "January 12, 2026"
+        "raw": "Applications Open Application form due Application materials due Enrollment deposit deadline Final payment deadline Three-week session 1 June 1–18, 2026 January 12, 2026"
       },
       "deadlines": [
         {
-          "type": "Session 1 application form",
-          "date": "2026-04-28",
+          "type": "Application form due",
+          "date": "2026-01-12",
           "time": null,
           "timezone": "ET",
-          "audience": "Online / commuter",
-          "raw": "April 28, 2026"
-        },
-        {
-          "type": "Summer application form",
-          "date": "2026-05-14",
-          "time": "23:59",
-          "timezone": "ET",
-          "audience": "Residential, online, or commuter (session-dependent)",
-          "raw": "May 14, 2026 (11:59 p.m. ET)"
+          "raw": "Application form due Application materials due Enrollment deposit deadline Final payment deadline Three-week session 1 June 1–18, 2026 January 12, 2026",
+          "audience": "See official page"
         }
       ],
       "eligibility": "international_allowed",
@@ -221,9 +216,9 @@
       "eligibilitySourceUrl": "https://sce.cornell.edu/pc-apply-eligibility/",
       "status": "closed",
       "sourceUrl": "https://sce.cornell.edu/pc-dates-summer/",
-      "sourceText": "Summer dates and deadlines are published by session and delivery format.",
-      "lastCheckedAt": "2026-08-30T00:00:00Z",
-      "lastChangedAt": "2026-08-30T00:00:00Z",
+      "sourceText": "Application form due Application materials due Enrollment deposit deadline Final payment deadline Three-week session 1 June 1–18, 2026 January 12, 2026",
+      "lastCheckedAt": "2026-08-30T06:57:09Z",
+      "lastChangedAt": "2026-08-30T06:57:09Z",
       "reviewState": "verified"
     },
     {
@@ -235,7 +230,7 @@
         "date": "2025-10-01",
         "time": null,
         "timezone": "ET",
-        "raw": "Applications for 2026 launched on October 1, 2025"
+        "raw": "Applications for our 2026 programs launched on October 1, 2025"
       },
       "deadlines": [
         {
@@ -268,9 +263,9 @@
       "eligibilitySourceUrl": "https://precollege.dartmouth.edu/programs/precollege-summer-scholars",
       "status": "closed",
       "sourceUrl": "https://precollege.dartmouth.edu/apply",
-      "sourceText": "After May 1, applications are rolling while space is available.",
-      "lastCheckedAt": "2026-08-30T00:00:00Z",
-      "lastChangedAt": "2026-08-30T00:00:00Z",
+      "sourceText": "Applications for our 2026 programs launched on October 1, 2025",
+      "lastCheckedAt": "2026-08-30T06:57:09Z",
+      "lastChangedAt": "2026-08-30T06:57:09Z",
       "reviewState": "verified"
     },
     {
@@ -299,12 +294,12 @@
       "applicationOpenDate": null,
       "deadlines": [
         {
-          "type": "Summer 2027 application deadline",
+          "type": "application deadline",
           "date": "2026-12-01",
           "time": null,
           "timezone": "ET",
-          "audience": "Eligible high-school sophomores and juniors",
-          "raw": "December 1, 2026"
+          "raw": "application deadline is December 1, 2026",
+          "audience": "See official page"
         }
       ],
       "eligibility": "international_allowed",
@@ -313,9 +308,9 @@
       "operator": "校方直属",
       "status": "open",
       "sourceUrl": "https://tisch.nyu.edu/special-programs/high-school-programs/tisch-summer-high-school",
-      "sourceText": "Summer 2027 application is open; deadline is December 1, 2026.",
-      "lastCheckedAt": "2026-08-30T00:00:00Z",
-      "lastChangedAt": "2026-08-30T00:00:00Z",
+      "sourceText": "application deadline is December 1, 2026",
+      "lastCheckedAt": "2026-08-30T06:57:09Z",
+      "lastChangedAt": "2026-08-30T06:57:09Z",
       "reviewState": "verified"
     },
     {
