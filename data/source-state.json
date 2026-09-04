@@ -1,42 +1,42 @@
 {
   "harvard-admissions": {
     "hash": "770f7b241fb968adedbb18f0bb485dc5fb356a435ad30bc0b52fdc7f9e914ab6",
-    "fetchedAt": "2026-09-03T00:14:57Z",
+    "fetchedAt": "2026-09-04T00:05:32Z",
     "url": "https://summer.harvard.edu/high-school/admissions/"
   },
   "brown-apply": {
     "hash": "6ed0ade6875188762f567178301806b9b8480574218348f2a5c08b7231d1391f",
-    "fetchedAt": "2026-09-03T00:14:57Z",
+    "fetchedAt": "2026-09-04T00:05:32Z",
     "url": "https://precollege.brown.edu/apply"
   },
   "yygs-deadlines": {
     "hash": "23abdd93e3fd4ac775c04dc05be9f45c91b0c0287b6ee4d5d1d7831534aeb17e",
-    "fetchedAt": "2026-09-03T00:14:57Z",
+    "fetchedAt": "2026-09-04T00:05:32Z",
     "url": "https://globalscholars.yale.edu/application-deadlines"
   },
   "yygs-status": {
     "hash": "cc0e0c6da480a2657fdc62045eff753979303365ee7fcc6f1ad1b4f86d7e67c6",
-    "fetchedAt": "2026-09-03T00:14:57Z",
+    "fetchedAt": "2026-09-04T00:05:32Z",
     "url": "https://globalscholars.yale.edu/"
   },
   "penn-wharton": {
-    "hash": "8b90fb7f601dd7201d178f4e740adc53072df6a562675bd72af7c8bc3a54ebba",
-    "fetchedAt": "2026-09-03T00:14:57Z",
+    "hash": "25e15dfa58a393bfe2adcf43793056836c92effa5302e5dec8628b093c02eaa0",
+    "fetchedAt": "2026-09-04T00:05:32Z",
     "url": "https://globalyouth.wharton.upenn.edu/pre-baccalaureate-program/admissions/"
   },
   "cornell-dates": {
     "hash": "14383499a0577fe9218039c0843bec6c93300e0a626dc382a39e3fecb1e5afbf",
-    "fetchedAt": "2026-09-03T00:14:57Z",
+    "fetchedAt": "2026-09-04T00:05:32Z",
     "url": "https://sce.cornell.edu/pc-dates-summer/"
   },
   "dartmouth-apply": {
     "hash": "94d787cfe9bfc71698ad5b28be200ba168f490500b6bfcf3eb9c510c9bb2a845",
-    "fetchedAt": "2026-09-03T00:14:57Z",
+    "fetchedAt": "2026-09-04T00:05:32Z",
     "url": "https://precollege.dartmouth.edu/apply"
   },
   "nyu-tisch": {
     "hash": "ebcf6f57237d362be146ffcdf0157ebf7b3f45d1e7665bad14d3844de292f906",
-    "fetchedAt": "2026-09-03T00:14:57Z",
+    "fetchedAt": "2026-09-04T00:05:32Z",
     "url": "https://tisch.nyu.edu/special-programs/high-school-programs/tisch-summer-high-school"
   }
 }
