@@ -5,6 +5,11 @@
     "body": "Source: https://summer.yale.edu/apply/pre-college-students\n\nCollector did not publish new data.\n\nReason: No configured labelled date could be found"
   },
   {
+    "key": "yygs-status",
+    "title": "[review] yygs-status",
+    "body": "Source: https://globalscholars.yale.edu/\n\nCollector did not publish new data.\n\nReason: YYGS application status marker not found"
+  },
+  {
     "key": "princeton-llp",
     "title": "[review] princeton-llp",
     "body": "Source: https://scienceoutreach.princeton.edu/laboratory-learning-program\n\nCollector did not publish new data.\n\nReason: 403 Client Error: Forbidden for url: https://scienceoutreach.princeton.edu/laboratory-learning-program"
