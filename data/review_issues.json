@@ -22,7 +22,7 @@
   {
     "key": "nyu-tisch",
     "title": "[review] nyu-tisch",
-    "body": "Source: https://tisch.nyu.edu/special-programs/high-school-programs/tisch-summer-high-school\n\nCollector did not publish new data.\n\nReason: HTTPSConnectionPool(host='tisch.nyu.edu', port=443): Max retries exceeded with url: /robots.txt (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1016)')))"
+    "body": "Source: https://tisch.nyu.edu/special-programs/high-school-programs/tisch-summer-high-school\n\nCollector did not publish new data.\n\nReason: HTTPSConnectionPool(host='tisch.nyu.edu', port=443): Max retries exceeded with url: /robots.txt (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1016)')))"
   },
   {
     "key": "stanford-summer-institutes",
