@@ -1,17 +1,17 @@
 {
   "harvard-admissions": {
-    "hash": "57cc05fe15574c20f386ea3e3103469689289ab2e03b145d69cebb121a07b6dd",
-    "fetchedAt": "2026-09-24T00:29:40Z",
+    "hash": "31ba23180bc4261474580363bc766f438adadf41e42bb06076164f6e58bff249",
+    "fetchedAt": "2026-09-25T00:32:57Z",
     "url": "https://summer.harvard.edu/high-school/admissions/"
   },
   "brown-apply": {
     "hash": "6ed0ade6875188762f567178301806b9b8480574218348f2a5c08b7231d1391f",
-    "fetchedAt": "2026-09-24T00:29:40Z",
+    "fetchedAt": "2026-09-25T00:32:57Z",
     "url": "https://precollege.brown.edu/apply"
   },
   "yygs-deadlines": {
     "hash": "8396ac6a3f44ca82734f96977fceb7e9204456d5776915a5c95f5712fe748749",
-    "fetchedAt": "2026-09-24T00:29:40Z",
+    "fetchedAt": "2026-09-25T00:32:57Z",
     "url": "https://globalscholars.yale.edu/application-deadlines"
   },
   "yygs-status": {
@@ -21,22 +21,22 @@
   },
   "penn-wharton": {
     "hash": "25e15dfa58a393bfe2adcf43793056836c92effa5302e5dec8628b093c02eaa0",
-    "fetchedAt": "2026-09-24T00:29:40Z",
+    "fetchedAt": "2026-09-25T00:32:57Z",
     "url": "https://globalyouth.wharton.upenn.edu/pre-baccalaureate-program/admissions/"
   },
   "cornell-dates": {
     "hash": "14383499a0577fe9218039c0843bec6c93300e0a626dc382a39e3fecb1e5afbf",
-    "fetchedAt": "2026-09-24T00:29:40Z",
+    "fetchedAt": "2026-09-25T00:32:57Z",
     "url": "https://sce.cornell.edu/pc-dates-summer/"
   },
   "dartmouth-apply": {
     "hash": "94d787cfe9bfc71698ad5b28be200ba168f490500b6bfcf3eb9c510c9bb2a845",
-    "fetchedAt": "2026-09-24T00:29:40Z",
+    "fetchedAt": "2026-09-25T00:32:57Z",
     "url": "https://precollege.dartmouth.edu/apply"
   },
   "nyu-tisch": {
     "hash": "b144342fc35b426b529a94faeef01649f156702519f82563c728e9db9497e9d1",
-    "fetchedAt": "2026-09-24T00:29:40Z",
+    "fetchedAt": "2026-09-25T00:32:57Z",
     "url": "https://tisch.nyu.edu/special-programs/high-school-programs/tisch-summer-high-school"
   }
 }
