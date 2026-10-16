@@ -20,6 +20,11 @@
     "body": "Source: https://precollege.sps.columbia.edu/admissions/dates-and-deadlines\n\nCollector did not publish new data.\n\nReason: Configured closed marker not found"
   },
   {
+    "key": "penn-wharton",
+    "title": "[review] penn-wharton",
+    "body": "Source: https://globalyouth.wharton.upenn.edu/pre-baccalaureate-program/admissions/\n\nCollector did not publish new data.\n\nReason: No session deadline found"
+  },
+  {
     "key": "cornell-dates",
     "title": "[review] cornell-dates",
     "body": "Source: https://sce.cornell.edu/pc-dates-summer/\n\nCollector did not publish new data.\n\nReason: 403 Client Error: Forbidden for url: https://sce.cornell.edu/pc-dates-summer/"
