@@ -32,11 +32,11 @@
   {
     "key": "stanford-summer-institutes",
     "title": "[review] stanford-summer-institutes",
-    "body": "Source: https://summerinstitutes.spcs.stanford.edu/admissions\n\nCollector did not publish new data.\n\nReason: No configured labelled date could be found"
+    "body": "Source: https://summerinstitutes.spcs.stanford.edu/admissions\n\nCollector did not publish new data.\n\nReason: Automated candidate conflicts with a manual override"
   },
   {
     "key": "stanford-summer-humanities",
     "title": "[review] stanford-summer-humanities",
-    "body": "Source: https://summerhumanities.spcs.stanford.edu/admissions-humanities\n\nCollector did not publish new data.\n\nReason: No configured labelled date could be found"
+    "body": "Source: https://summerhumanities.spcs.stanford.edu/admissions-humanities\n\nCollector did not publish new data.\n\nReason: Automated candidate conflicts with a manual override"
   }
 ]
