@@ -1,17 +1,17 @@
 {
   "harvard-admissions": {
     "hash": "3c777584d2e40c6dbd37e3f897b2ef07c36c1bfd721bd45c4a16d1b9104c6b6c",
-    "fetchedAt": "2026-11-21T03:12:06Z",
+    "fetchedAt": "2026-11-22T02:12:40Z",
     "url": "https://summer.harvard.edu/high-school/admissions/"
   },
   "brown-apply": {
     "hash": "91cf531a910bd7650d02f4ac43a636c4471e94899199878247d7b8cc9c546441",
-    "fetchedAt": "2026-11-21T03:12:06Z",
+    "fetchedAt": "2026-11-22T02:12:40Z",
     "url": "https://precollege.brown.edu/apply"
   },
   "yygs-deadlines": {
     "hash": "3f251f7ab6244fb607bd0e13a70a55139149ce8aed5944628af477ef35ec299f",
-    "fetchedAt": "2026-11-21T03:12:06Z",
+    "fetchedAt": "2026-11-22T02:12:40Z",
     "url": "https://globalscholars.yale.edu/application-deadlines"
   },
   "yygs-status": {
@@ -31,12 +31,12 @@
   },
   "dartmouth-apply": {
     "hash": "0888ce15875d7d633ddd4299e2da89123b077e6c1b70449e62a460eb58858896",
-    "fetchedAt": "2026-11-21T03:12:06Z",
+    "fetchedAt": "2026-11-22T02:12:40Z",
     "url": "https://precollege.dartmouth.edu/apply"
   },
   "nyu-tisch": {
     "hash": "3822f3228383e9156530d6c40d969c7800c74554c86da1aeed97ce42ee9faabd",
-    "fetchedAt": "2026-11-21T03:12:06Z",
+    "fetchedAt": "2026-11-22T02:12:40Z",
     "url": "https://tisch.nyu.edu/special-programs/high-school-programs/tisch-summer-high-school"
   },
   "stanford-summer-institutes": {
@@ -46,7 +46,7 @@
   },
   "stanford-summer-humanities": {
     "hash": "a5b0146a4422632a7bb3f6ad6e87325d5e850c4753571aaaa2239197996ca105",
-    "fetchedAt": "2026-11-21T03:12:06Z",
+    "fetchedAt": "2026-11-22T02:12:40Z",
     "url": "https://summerhumanities.spcs.stanford.edu/admissions-humanities"
   }
 }
